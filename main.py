@@ -57,7 +57,7 @@ async def add_task_job(task: Task):
                 send,
                 trigger='date',
                 run_date=task.remaining_time,
-                args=(task.tg_id, f"{task.title} -- {task.description} -- {task.remaining_time}"),
+                args=(task.tg_id, f"📝{task.title} -- {task.description} -- ⌛{task.remaining_time}"),
                 id=str(task.id),
                 replace_existing=True
             )
